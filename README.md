@@ -1,5 +1,7 @@
 ## MyBookApp
 
+### Bachelor's Degree graduation project - Java app for an online library using MySQL databases
+
 -  Login interface
 
 <img src="https://github.com/andreas95/MyBookApp/blob/master/login.png"/>
