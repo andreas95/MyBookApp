@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<AnchorPane fx:id="Main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../../resources/css/application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.unibuc.MyLibrary.main.java.controller.HelpController">
+    <children>
+
+        <AnchorPane fx:id="HeaderContentPanel" AnchorPane.topAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.leftAnchor="0.0" prefWidth="-Infinity" styleClass="header-content-panel" minHeight="115.0" maxHeight="115.0" prefHeight="115.0">
+            <children>
+
+                <Text text="Report a Problem" fill="#444c63" AnchorPane.topAnchor="15.0" AnchorPane.leftAnchor="20.0">
+                    <font>
+                        <Font size="24.0"  name="Proxima Nova Regular"/>
+                    </font>
+                </Text>
+                <Line fx:id="HeaderSeparator" stroke="#dadfea" strokeWidth="3" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0" startX="0"/>
+
+                <Text text="This contact form will forward your concerns directly to the person who handles the specific issue." fill="#444c63" AnchorPane.topAnchor="80.0" AnchorPane.leftAnchor="20.0">
+                    <font>
+                        <Font size="16.0"  name="Proxima Nova Regular"/>
+                    </font>
+                </Text>
+
+                <Line fx:id="HeaderSeparator2" stroke="#dadfea" strokeWidth="3" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="115.0" startX="0"/>
+
+            </children>
+        </AnchorPane>
+
+        <AnchorPane fx:id="BottomContentPanel" AnchorPane.topAnchor="150.0" AnchorPane.rightAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.bottomAnchor="30.0" prefWidth="-Infinity">
+            <padding>
+                <Insets left="40" top="0" bottom="20" right="20"/>
+            </padding>
+            <children>
+                <ImageView pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="750.0">
+                    <image>
+                        <Image url="@../../resources/images/application/repair.png" />
+                    </image>
+                </ImageView>
+
+                <Text fill="#444c63" text="Where is the problem?" AnchorPane.topAnchor="0.0">
+                    <font>
+                        <Font name="Arial Black" size="19.0"/>
+                    </font>
+                </Text>
+
+                <ComboBox fx:id="FieldCategory" prefWidth="300.0" minWidth="300.0" maxWidth="300.0" AnchorPane.topAnchor="35.0" promptText="Select one">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="General feedback" />
+                            <String fx:value="Something isn't working" />
+                            <String fx:value="Abusive content" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+
+
+                <Text fill="#444c63" text="What's happened?" AnchorPane.topAnchor="95.0">
+                    <font>
+                        <Font name="Arial Black" size="19.0"/>
+                    </font>
+                </Text>
+
+                <TextArea fx:id="FieldDescription" AnchorPane.topAnchor="125.0" prefColumnCount="50" prefRowCount="10" promptText="Briefly explain what's happened and what steps we can take to reproduce the problem..."/>
+
+                <Button fx:id="ButtonScreenshot" text="Upload screenshot" AnchorPane.topAnchor="320.0" onMouseClicked="#openScreenshot"/>
+
+                <HBox spacing="10" alignment="CENTER_RIGHT" AnchorPane.topAnchor="365.0" AnchorPane.leftAnchor="500.0">
+                    <children>
+                        <Button fx:id="ButtonClear" mnemonicParsing="false" onMouseClicked="#clear" text="Clear"/>
+                        <Button fx:id="ButtonSend" mnemonicParsing="false" onMouseClicked="#send" text="Send"/>
+                    </children>
+                </HBox>
+
+            </children>
+        </AnchorPane>
+
+    </children>
+</AnchorPane>

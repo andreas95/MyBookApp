@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import org.controlsfx.control.textfield.CustomTextField?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.glyphfont.Glyph?>
+<?import javafx.scene.shape.Line?>
+<?import org.controlsfx.control.textfield.CustomPasswordField?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefWidth="330" maxWidth="330" minWidth="300" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.unibuc.MyLibrary.main.java.controller.SigninController">
+    <children>
+
+<AnchorPane fx:id="ContentPanel" AnchorPane.topAnchor="0.0" prefWidth="330" minWidth="330" maxWidth="330" minHeight="290.0" prefHeight="290.0" maxHeight="290.0" styleClass="content">
+    <children>
+        <ImageView AnchorPane.topAnchor="20.0" AnchorPane.leftAnchor="120.0" fitHeight="90.0" fitWidth="89.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../resources/images/application/avatar_login.png" />
+            </image>
+        </ImageView>
+
+        <CustomTextField fx:id="Username" promptText="User Name" AnchorPane.topAnchor="130.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="20.0" styleClass="custom-field" minHeight="35.0" maxHeight="35.0" prefHeight="35.0">
+            <font>
+                <Font size="13.0" name="Proxima Nova Regular"/>
+            </font>
+            <left>
+                <Glyph fontFamily="FontAwesome" icon="USER" textFill="#5d5d66" fontSize="17.0"/>
+            </left>
+        </CustomTextField>
+
+        <Line stroke="#3c3c46" strokeWidth="1" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="170.0" startX="0" endX="300"/>
+
+        <CustomPasswordField fx:id="Password" promptText="***********" AnchorPane.topAnchor="180.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="20.0" styleClass="custom-password-field" minHeight="35.0" maxHeight="35.0" prefHeight="35.0">
+            <font>
+                <Font size="13.0"  name="Proxima Nova Regular"/>
+            </font>
+            <left>
+                <Glyph fontFamily="FontAwesome" icon="KEY" textFill="#5d5d66" fontSize="17.0"/>
+            </left>
+        </CustomPasswordField>
+
+        <Line stroke="#3c3c46" strokeWidth="1" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="220.0" startX="0" endX="300"/>
+
+        <Text AnchorPane.leftAnchor="15.0" AnchorPane.bottomAnchor="15.0" fill="#b6b6b6" text="Sign Up" onMouseClicked="#signup" styleClass="text-hover">
+            <font>
+                <Font size="13.0" name="Proxima Nova Regular"/>
+            </font>
+        </Text>
+        <Text AnchorPane.rightAnchor="15.0" AnchorPane.bottomAnchor="15.0" fill="#b6b6b6" text="Forget Password?" onMouseClicked="#recover" styleClass="text-hover">
+            <font>
+                <Font size="13.0"  name="Proxima Nova Regular"/>
+            </font>
+        </Text>
+    </children>
+</AnchorPane>
+
+<AnchorPane fx:id="BottomPanel" AnchorPane.topAnchor="290.0" prefWidth="330" minWidth="330" maxWidth="330" minHeight="65.0" prefHeight="65.0" maxHeight="65.0" styleClass="footer-login">
+<children>
+    <Text AnchorPane.topAnchor="25.0" AnchorPane.leftAnchor="110.0" onMouseClicked="#login" text="SIGN IN NOW" fill="#ffffff" styleClass="button-hover">
+        <font>
+            <Font size="16.0" name="Proxima Nova Bold" />
+        </font>
+    </Text>
+</children>
+</AnchorPane>
+
+    </children>
+</AnchorPane>

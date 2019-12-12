@@ -1,0 +1,76 @@
+.root {
+    -fx-background-color: transparent;
+}
+
+.header {
+    -fx-padding: 0px;
+    -fx-border-width: 0px;
+    -fx-background-radius: 10px 10px 0 0;
+    -fx-background-color: #23232e;
+    -fx-border-radius: 10px 10px 0 0;
+}
+
+.content {
+    -fx-padding: 0px;
+    -fx-border-width: 0px;
+    -fx-background-color: #2b2b36;
+}
+
+.footer-login {
+    -fx-padding: 0px;
+    -fx-border-width: 0px;
+    -fx-background-color: #3fa952;
+    -fx-background-radius: 0 0 10px 10px;
+    -fx-border-radius: 0 0 10px 10px;
+}
+
+.footer-recover {
+    -fx-padding: 0px;
+    -fx-border-width: 0px;
+    -fx-background-color: #188fff;
+    -fx-background-radius: 0 0 10px 10px;
+    -fx-border-radius: 0 0 10px 10px;
+}
+
+.footer-register {
+    -fx-padding: 0px;
+    -fx-border-width: 0px;
+    -fx-background-color: #d43f3a;
+    -fx-background-radius: 0 0 10px 10px;
+    -fx-border-radius: 0 0 10px 10px;
+}
+
+.footer-message {
+    -fx-padding: 0px;
+    -fx-border-width: 0px;
+    -fx-background-color: #fbbc05;
+    -fx-background-radius: 0 0 10px 10px;
+    -fx-border-radius: 0 0 10px 10px;
+}
+
+.button-hover:hover {
+    -fx-cursor: hand;
+}
+
+.text-hover:hover {
+    -fx-underline: true;
+    -fx-cursor: hand;
+}
+
+.custom-field {
+    -fx-background-color: transparent;
+    -fx-text-fill: #a3acbe;
+    -fx-prompt-text-fill: #a3acbe;
+    -fx-padding: 0 0 0 15px;
+    -fx-font-size: 16px;
+    -fx-font-family: "Proxima Nova Regular";
+}
+
+.custom-password-field {
+    -fx-background-color: transparent;
+    -fx-text-fill: #dd3e3e;
+    -fx-prompt-text-fill: #dd3e3e;
+    -fx-padding: 0 0 0 15px;
+    -fx-font-size: 16px;
+    -fx-font-family: "Proxima Nova Regular";
+}

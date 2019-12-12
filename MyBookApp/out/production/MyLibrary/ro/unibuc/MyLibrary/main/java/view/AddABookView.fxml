@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.ImageView?>
+
+<AnchorPane fx:id="Main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../../resources/css/application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.unibuc.MyLibrary.main.java.controller.AddABookController">
+    <children>
+        <AnchorPane fx:id="HeaderContentPanel" maxHeight="75.0" minHeight="75.0" prefHeight="75.0" prefWidth="-Infinity" styleClass="header-content-panel" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Text fill="#444c63" text="Add a New Book" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+                    <font>
+                        <Font name="Proxima Nova Regular" size="22.0" />
+                    </font>
+                </Text>
+                <Line fx:id="HeaderSeparator" startX="0" stroke="#dadfea" strokeWidth="3" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0" />
+            </children>
+        </AnchorPane>
+
+        <AnchorPane fx:id="BottomContentPanel" prefWidth="-Infinity" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="90.0">
+            <padding>
+                <Insets bottom="20" left="10" right="20" top="0" />
+            </padding>
+            <children>
+
+                <VBox fx:id="LayoutCover" alignment="CENTER" AnchorPane.leftAnchor="1000.0" AnchorPane.topAnchor="15.0">
+                    <children>
+                        <ImageView fx:id="ImageBook" fitWidth="400" fitHeight="600" pickOnBounds="true" preserveRatio="true"/>
+                    </children>
+                </VBox>
+
+                <GridPane alignment="CENTER" hgap="5" vgap="16" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0">
+                <children>
+                    <!-- Book Title -->
+                    <Text fill="#444c63" text="Title:" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                        <font>
+                            <Font name="Proxima Nova Regular" size="17.0" />
+                        </font>
+                    </Text>
+                    <TextField fx:id="BookTitle" prefHeight="34" prefWidth="500" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                    <!-- Book Author -->
+                    <Text fill="#444c63" text="Author:" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                        <font>
+                            <Font name="Proxima Nova Regular" size="17.0" />
+                        </font>
+                    </Text>
+                    <TextField fx:id="BookAuthor" prefHeight="34" prefWidth="500" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                    <!-- Book ISBN -->
+                    <Text fill="#444c63" text="ISBN:" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                        <font>
+                            <Font name="Proxima Nova Regular" size="17.0" />
+                        </font>
+                    </Text>
+                    <TextField fx:id="BookISBN" prefHeight="34" prefWidth="500" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                    <!-- Book Pages -->
+                    <Text fill="#444c63" text="Pages:" GridPane.columnIndex="0" GridPane.rowIndex="3">
+                        <font>
+                            <Font name="Proxima Nova Regular" size="17.0" />
+                        </font>
+                    </Text>
+                    <TextField fx:id="BookPages" prefHeight="34" prefWidth="500" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                    <!-- Book Genre -->
+                    <Text fill="#444c63" text="Category:" GridPane.columnIndex="0" GridPane.rowIndex="4">
+                        <font>
+                            <Font name="Proxima Nova Regular" size="17.0" />
+                        </font>
+                    </Text>
+                    <ComboBox fx:id="BookCategory" prefHeight="34" prefWidth="500" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                    <!-- Book Description -->
+                    <Text fill="#444c63" text="Description:" GridPane.columnIndex="0" GridPane.rowIndex="5" GridPane.valignment="TOP">
+                        <font>
+                            <Font name="Proxima Nova Regular" size="17.0" />
+                        </font>
+                    </Text>
+                    <TextArea fx:id="BookDescription" prefColumnCount="15" prefWidth="500" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+                    <!-- Book Language -->
+                    <Text fill="#444c63" text="Language:" GridPane.columnIndex="0" GridPane.rowIndex="6">
+                        <font>
+                            <Font name="Proxima Nova Regular" size="17.0" />
+                        </font>
+                    </Text>
+                    <ComboBox fx:id="BookLanguage" prefHeight="34" prefWidth="500" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+                    <!-- Book Cover -->
+                    <Text fill="#444c63" text="Cover:" GridPane.columnIndex="0" GridPane.rowIndex="7">
+                        <font>
+                            <Font name="Proxima Nova Regular" size="17.0" />
+                        </font>
+                    </Text>
+                    <Button fx:id="ButtonCover" text="Upload the cover" mnemonicParsing="false" onMouseClicked="#openCover" GridPane.columnIndex="1" GridPane.rowIndex="7"/>
+
+                    <!-- Book PDF -->
+                    <Text fill="#444c63" text="Book:" GridPane.columnIndex="0" GridPane.rowIndex="8">
+                        <font>
+                            <Font name="Proxima Nova Regular" size="17.0" />
+                        </font>
+                    </Text>
+                    <Button fx:id="ButtonBook" text="Upload the book (PDF files only)" mnemonicParsing="false" onMouseClicked="#openBook" GridPane.columnIndex="1" GridPane.rowIndex="8"/>
+
+                    <HBox spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="9" alignment="CENTER_RIGHT">
+                        <children>
+                            <Button fx:id="ButtonClear" mnemonicParsing="false" onMouseClicked="#clear" text="Clear"/>
+                            <Button fx:id="ButtonSave" mnemonicParsing="false" onMouseClicked="#addBook" text="Save"/>
+                        </children>
+                    </HBox>
+
+                </children>
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
+                </GridPane>
+
+
+            </children>
+        </AnchorPane>
+
+    </children>
+</AnchorPane>

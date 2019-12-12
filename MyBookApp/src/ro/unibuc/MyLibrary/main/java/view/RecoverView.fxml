@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import org.controlsfx.control.textfield.CustomTextField?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.glyphfont.Glyph?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefWidth="330" maxWidth="330" minWidth="300" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.unibuc.MyLibrary.main.java.controller.RecoverController">
+    <children>
+
+        <AnchorPane fx:id="ContentPanel" AnchorPane.topAnchor="0.0" prefWidth="330" minWidth="330" maxWidth="330" minHeight="200.0" prefHeight="200.0" maxHeight="200.0" styleClass="content">
+            <children>
+                <CustomTextField fx:id="FieldEmail" promptText="Email Address" AnchorPane.topAnchor="50.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="20.0" styleClass="custom-field" minHeight="35.0" maxHeight="35.0" prefHeight="35.0">
+                    <font>
+                        <Font size="13.0" name="Proxima Nova Regular"/>
+                    </font>
+                    <left>
+                        <Glyph fontFamily="FontAwesome" icon="ENVELOPE" textFill="#5d5d66" fontSize="17.0"/>
+                    </left>
+                </CustomTextField>
+
+                <Line stroke="#3c3c46" strokeWidth="1" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="90.0" startX="0" endX="300"/>
+
+                <Text AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="130.0" fill="#b6b6b6" text="Sing In" onMouseClicked="#singin" styleClass="text-hover">
+                    <font>
+                        <Font size="13.0" name="Proxima Nova Regular"/>
+                    </font>
+                </Text>
+                <Text AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="130.0" fill="#b6b6b6" text="Sign Up" onMouseClicked="#signup" styleClass="text-hover">
+                    <font>
+                        <Font size="13.0"  name="Proxima Nova Regular"/>
+                    </font>
+                </Text>
+            </children>
+        </AnchorPane>
+
+        <AnchorPane fx:id="BottomPanel" AnchorPane.topAnchor="170.0" prefWidth="330" minWidth="330" maxWidth="330" minHeight="65.0" prefHeight="65.0" maxHeight="65.0" styleClass="footer-recover">
+            <children>
+                <Text AnchorPane.topAnchor="25.0" AnchorPane.leftAnchor="90.0" text="SEND MY PASSWORD" onMouseClicked="#recover" fill="#ffffff" styleClass="button-hover">
+                    <font>
+                        <Font size="16.0" name="Proxima Nova Bold" />
+                    </font>
+                </Text>
+            </children>
+        </AnchorPane>
+
+    </children>
+</AnchorPane>

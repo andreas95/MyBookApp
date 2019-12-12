@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
+<AnchorPane fx:id="Main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../../resources/css/application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.unibuc.MyLibrary.main.java.controller.HistoryController">
+    <children>
+
+        <AnchorPane fx:id="HeaderContentPanel" AnchorPane.topAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.leftAnchor="0.0" prefWidth="-Infinity" styleClass="header-content-panel" minHeight="115.0" maxHeight="115.0" prefHeight="115.0">
+            <children>
+
+                <Text text="History" fill="#444c63" AnchorPane.topAnchor="15.0" AnchorPane.leftAnchor="20.0">
+                    <font>
+                        <Font size="24.0" name="Proxima Nova Regular"/>
+                    </font>
+                </Text>
+                <Line fx:id="HeaderSeparator" stroke="#dadfea" strokeWidth="3" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0" startX="0"/>
+
+                <Text text="View Reading History" fill="#444c63" AnchorPane.topAnchor="80.0" AnchorPane.leftAnchor="20.0">
+                    <font>
+                        <Font size="16.0"  name="Proxima Nova Regular"/>
+                    </font>
+                </Text>
+
+                <Line fx:id="HeaderSeparator2" stroke="#dadfea" strokeWidth="3" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="115.0" startX="0"/>
+
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="BottomContentPanel" AnchorPane.topAnchor="150.0" AnchorPane.rightAnchor="20.0" prefWidth="-Infinity" AnchorPane.leftAnchor="20.0" AnchorPane.bottomAnchor="30.0">
+            <padding>
+                <Insets left="40" top="0" bottom="20" right="20"/>
+            </padding>
+            <children>
+                <!-- Insert books here -->
+
+            </children>
+        </AnchorPane>
+
+        <ScrollPane fx:id="Sp" fitToWidth="true" hbarPolicy="NEVER" vbarPolicy="AS_NEEDED" AnchorPane.topAnchor="125.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.bottomAnchor="0.0"/>
+    </children>
+</AnchorPane>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import org.controlsfx.control.Rating?>
+<?import javafx.scene.control.Label?>
+<AnchorPane fx:id="Main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../../resources/css/application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.unibuc.MyLibrary.main.java.controller.ViewBookController">
+    <children>
+        <AnchorPane fx:id="HeaderContentPanel" AnchorPane.topAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.leftAnchor="0.0" prefWidth="-Infinity" styleClass="header-content-panel" minHeight="125.0" maxHeight="125.0" prefHeight="125.0">
+            <children>
+                <Text fx:id="BookName" fill="#444c63" AnchorPane.topAnchor="15.0" AnchorPane.leftAnchor="20.0">
+                    <font>
+                        <Font size="24.0" name="Proxima Nova Regular"/>
+                    </font>
+                </Text>
+
+                <Rating fx:id="Favourite" orientation="HORIZONTAL" partialRating="false" max="1" onMouseClicked="#togglefav" AnchorPane.topAnchor="15.0" AnchorPane.rightAnchor="20.0"/>
+
+                <Line fx:id="HeaderSeparator" stroke="#dadfea" strokeWidth="3" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0" startX="0"/>
+
+                <Text fx:id="BookAuthor" fill="#444c63" AnchorPane.topAnchor="80.0" AnchorPane.leftAnchor="20.0">
+                    <font>
+                        <Font size="18.0" name="Proxima Nova Regular"/>
+                    </font>
+                </Text>
+
+                <Line fx:id="HeaderSeparator2" stroke="#dadfea" strokeWidth="3" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="122.0" startX="0"/>
+
+            </children>
+        </AnchorPane>
+
+        <AnchorPane fx:id="BottomContentPanel" AnchorPane.topAnchor="150.0" AnchorPane.rightAnchor="20.0" prefWidth="-Infinity" AnchorPane.leftAnchor="20.0" AnchorPane.bottomAnchor="30.0">
+            <padding>
+                <Insets left="20" top="0" bottom="0" right="20"/>
+            </padding>
+            <children>
+
+                <Text text="Description:" fill="#444c63" AnchorPane.topAnchor="10.0" AnchorPane.leftAnchor="360.0">
+                    <font>
+                        <Font size="18.0" name="Proxima Nova Regular"/>
+                    </font>
+                </Text>
+
+                <Text fx:id="description_text" fill="#6f7d95" AnchorPane.topAnchor="45.0" AnchorPane.leftAnchor="365.0" wrappingWidth="800.0" textAlignment="JUSTIFY">
+                    <font>
+                        <Font size="15.0" name="Proxima Nova Regular"/>
+                    </font>
+                </Text>
+
+                <Text fx:id="language" fill="#005CA5" AnchorPane.topAnchor="410.0" AnchorPane.leftAnchor="360.0">
+                    <font>
+                        <Font size="15.0" name="Proxima Nova Regular"/>
+                    </font>
+                </Text>
+
+                <Text fx:id="ISBN" fill="#005CA5" AnchorPane.topAnchor="435.0" AnchorPane.leftAnchor="360.0">
+                    <font>
+                        <Font size="15.0" name="Proxima Nova Regular"/>
+                    </font>
+                </Text>
+
+                <Text fx:id="bottom_text" fill="#005CA5" AnchorPane.topAnchor="460.0" AnchorPane.leftAnchor="360.0">
+                    <font>
+                        <Font size="15.0" name="Proxima Nova Regular"/>
+                    </font>
+                </Text>
+
+                <ImageView pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-50.0" AnchorPane.leftAnchor="200.0">
+                    <image>
+                        <Image url="@../../resources/images/application/ads_horizontal.jpg" />
+                    </image>
+                </ImageView>
+
+                <ImageView pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="180.0" AnchorPane.rightAnchor="0.0">
+                    <image>
+                        <Image url="@../../resources/images/application/ads_vertical.png" />
+                    </image>
+                </ImageView>
+
+                <Label fx:id="ReadBook" AnchorPane.topAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../resources/images/application/readbook.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Label>
+
+
+            </children>
+        </AnchorPane>
+
+    </children>
+</AnchorPane>

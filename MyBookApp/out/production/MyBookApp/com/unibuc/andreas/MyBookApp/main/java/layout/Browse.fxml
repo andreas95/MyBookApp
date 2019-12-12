@@ -1,0 +1,1263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import org.controlsfx.control.textfield.CustomTextField?>
+<?import org.controlsfx.glyphfont.Glyph?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+
+<AnchorPane fx:id="Main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../../resources/css/application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.unibuc.andreas.MyBookApp.main.java.fragments.Browse">
+    <children>
+        <AnchorPane fx:id="HeaderContentPanel" AnchorPane.topAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.leftAnchor="0.0" prefWidth="-Infinity" styleClass="header-content-panel" minHeight="125.0" maxHeight="125.0" prefHeight="125.0">
+            <children>
+                <Text text="Browse Available Books" fill="#444c63" AnchorPane.topAnchor="15.0" AnchorPane.leftAnchor="20.0">
+                    <font>
+                        <Font size="22.0"  name="Proxima Nova Regular"/>
+                    </font>
+                </Text>
+                <Line fx:id="HeaderSeparator" stroke="#dadfea" strokeWidth="3" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0" startX="0"/>
+
+                <ListView fx:id="ListBrowse" orientation="HORIZONTAL" prefHeight="30.0" minHeight="30.0" maxHeight="30.0" prefWidth="500.0" minWidth="500.0" maxWidth="500.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="80.0" styleClass="browse-menu">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <Label text="All Books">
+                                <font>
+                                    <Font size="12.0"  name="Proxima Nova Regular"/>
+                                </font>
+                            </Label>
+                            <Label text="Most Recent">
+                                <font>
+                                    <Font size="12.0"  name="Proxima Nova Regular"/>
+                                </font>
+                            </Label>
+                            <Label text="Most Popular">
+                                <font>
+                                    <Font size="12.0"  name="Proxima Nova Regular"/>
+                                </font>
+                            </Label>
+                            <Label text="Free Books">
+                                <font>
+                                    <Font size="12.0"  name="Proxima Nova Regular"/>
+                                </font>
+                            </Label>
+                        </FXCollections>
+                    </items>
+                </ListView>
+
+                <CustomTextField fx:id="FieldSearch" promptText="Enter Keywords" AnchorPane.topAnchor="80.0" AnchorPane.rightAnchor="20.0" styleClass="search-header" style="-fx-padding: 10px 20px 0 20px" minHeight="35.0" maxHeight="35.0" prefHeight="35.0">
+                    <font>
+                        <Font size="13.0" name="Proxima Nova Regular"/>
+                    </font>
+                    <right>
+                        <Glyph fontFamily="FontAwesome" icon="SEARCH" textFill="#8c97b2" fontSize="17.0" styleClass="label-hover"/>
+                    </right>
+                </CustomTextField>
+
+                <Line fx:id="HeaderSeparator2" stroke="#dadfea" strokeWidth="3" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="122.0" startX="0"/>
+
+            </children>
+        </AnchorPane>
+
+        <AnchorPane fx:id="BottomContentPanel" AnchorPane.topAnchor="150.0" AnchorPane.rightAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.bottomAnchor="30.0" prefWidth="-Infinity">
+            <padding>
+                <Insets left="40" top="0" bottom="20" right="20"/>
+            </padding>
+            <children>
+                <!-- row 1 -->
+
+                <VBox AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="20.0" prefWidth="200.0" minWidth="200.0" maxWidth="200.0" minHeight="350.0" maxHeight="350.0" prefHeight="350.0">
+                    <children>
+                        <ImageView fitHeight="275.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../resources/images/books/demo_book.jpg" />
+                            </image>
+                        </ImageView>
+                        <Text text="Suneeta Vaswani" fill="#444c63">
+                            <font>
+                                <Font size="16.0"  name="Proxima Nova Regular"/>
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="3.0" top="10.0"/>
+                            </VBox.margin>
+                        </Text>
+                        <Text text="by Geeta Devi" fill="#6f7d95">
+                            <font>
+                                <Font size="12.0"  name="Proxima Nova Regular"/>
+                            </font>
+                        </Text>
+                        <HBox spacing="4">
+                            <children>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR_HALF_ALT" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR_ALT" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="10.0" top="5.0"/>
+                            </VBox.margin>
+                        </HBox>
+
+                    </children>
+                </VBox>
+
+                <VBox AnchorPane.leftAnchor="240.0" AnchorPane.topAnchor="20.0" prefWidth="200.0" minWidth="200.0" maxWidth="200.0" minHeight="350.0" maxHeight="350.0" prefHeight="350.0">
+                    <children>
+                        <ImageView fitHeight="275.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../resources/images/books/demo_book.jpg" />
+                            </image>
+                        </ImageView>
+                        <Text text="Suneeta Vaswani" fill="#444c63">
+                            <font>
+                                <Font size="16.0"  name="Proxima Nova Regular"/>
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="3.0" top="10.0"/>
+                            </VBox.margin>
+                        </Text>
+                        <Text text="by Geeta Devi" fill="#6f7d95">
+                            <font>
+                                <Font size="12.0"  name="Proxima Nova Regular"/>
+                            </font>
+                        </Text>
+                        <HBox spacing="4">
+                            <children>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR_HALF_ALT" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR_ALT" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="10.0" top="5.0"/>
+                            </VBox.margin>
+                        </HBox>
+
+                    </children>
+                </VBox>
+
+                <VBox AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="20.0" prefWidth="200.0" minWidth="200.0" maxWidth="200.0" minHeight="350.0" maxHeight="350.0" prefHeight="350.0">
+                    <children>
+                        <ImageView fitHeight="275.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../resources/images/books/demo_book.jpg" />
+                            </image>
+                        </ImageView>
+                        <Text text="Suneeta Vaswani" fill="#444c63">
+                            <font>
+                                <Font size="16.0"  name="Proxima Nova Regular"/>
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="3.0" top="10.0"/>
+                            </VBox.margin>
+                        </Text>
+                        <Text text="by Geeta Devi" fill="#6f7d95">
+                            <font>
+                                <Font size="12.0"  name="Proxima Nova Regular"/>
+                            </font>
+                        </Text>
+                        <HBox spacing="4">
+                            <children>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR_HALF_ALT" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR_ALT" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="10.0" top="5.0"/>
+                            </VBox.margin>
+                        </HBox>
+
+                    </children>
+                </VBox>
+
+                <VBox AnchorPane.leftAnchor="720.0" AnchorPane.topAnchor="20.0" prefWidth="200.0" minWidth="200.0" maxWidth="200.0" minHeight="350.0" maxHeight="350.0" prefHeight="350.0">
+                    <children>
+                        <ImageView fitHeight="275.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../resources/images/books/demo_book.jpg" />
+                            </image>
+                        </ImageView>
+                        <Text text="Suneeta Vaswani" fill="#444c63">
+                            <font>
+                                <Font size="16.0"  name="Proxima Nova Regular"/>
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="3.0" top="10.0"/>
+                            </VBox.margin>
+                        </Text>
+                        <Text text="by Geeta Devi" fill="#6f7d95">
+                            <font>
+                                <Font size="12.0"  name="Proxima Nova Regular"/>
+                            </font>
+                        </Text>
+                        <HBox spacing="4">
+                            <children>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR_HALF_ALT" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR_ALT" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="10.0" top="5.0"/>
+                            </VBox.margin>
+                        </HBox>
+
+                    </children>
+                </VBox>
+
+                <VBox AnchorPane.leftAnchor="960.0" AnchorPane.topAnchor="20.0" prefWidth="200.0" minWidth="200.0" maxWidth="200.0" minHeight="350.0" maxHeight="350.0" prefHeight="350.0">
+                    <children>
+                        <ImageView fitHeight="275.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../resources/images/books/demo_book.jpg" />
+                            </image>
+                        </ImageView>
+                        <Text text="Suneeta Vaswani" fill="#444c63">
+                            <font>
+                                <Font size="16.0"  name="Proxima Nova Regular"/>
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="3.0" top="10.0"/>
+                            </VBox.margin>
+                        </Text>
+                        <Text text="by Geeta Devi" fill="#6f7d95">
+                            <font>
+                                <Font size="12.0"  name="Proxima Nova Regular"/>
+                            </font>
+                        </Text>
+                        <HBox spacing="4">
+                            <children>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR_HALF_ALT" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR_ALT" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="10.0" top="5.0"/>
+                            </VBox.margin>
+                        </HBox>
+
+                    </children>
+                </VBox>
+
+                <VBox AnchorPane.leftAnchor="1200.0" AnchorPane.topAnchor="20.0" prefWidth="200.0" minWidth="200.0" maxWidth="200.0" minHeight="350.0" maxHeight="350.0" prefHeight="350.0">
+                    <children>
+                        <ImageView fitHeight="275.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../resources/images/books/demo_book.jpg" />
+                            </image>
+                        </ImageView>
+                        <Text text="Suneeta Vaswani" fill="#444c63">
+                            <font>
+                                <Font size="16.0"  name="Proxima Nova Regular"/>
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="3.0" top="10.0"/>
+                            </VBox.margin>
+                        </Text>
+                        <Text text="by Geeta Devi" fill="#6f7d95">
+                            <font>
+                                <Font size="12.0"  name="Proxima Nova Regular"/>
+                            </font>
+                        </Text>
+                        <HBox spacing="4">
+                            <children>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR_HALF_ALT" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR_ALT" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="10.0" top="5.0"/>
+                            </VBox.margin>
+                        </HBox>
+
+                    </children>
+                </VBox>
+
+                <VBox AnchorPane.leftAnchor="1440.0" AnchorPane.topAnchor="20.0" prefWidth="200.0" minWidth="200.0" maxWidth="200.0" minHeight="350.0" maxHeight="350.0" prefHeight="350.0">
+                    <children>
+                        <ImageView fitHeight="275.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../resources/images/books/demo_book.jpg" />
+                            </image>
+                        </ImageView>
+                        <Text text="Suneeta Vaswani" fill="#444c63">
+                            <font>
+                                <Font size="16.0"  name="Proxima Nova Regular"/>
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="3.0" top="10.0"/>
+                            </VBox.margin>
+                        </Text>
+                        <Text text="by Geeta Devi" fill="#6f7d95">
+                            <font>
+                                <Font size="12.0"  name="Proxima Nova Regular"/>
+                            </font>
+                        </Text>
+                        <HBox spacing="4">
+                            <children>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR_HALF_ALT" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR_ALT" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="10.0" top="5.0"/>
+                            </VBox.margin>
+                        </HBox>
+
+                    </children>
+                </VBox>
+
+                <!-- row 2 -->
+
+                <VBox AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="400.0" prefWidth="200.0" minWidth="200.0" maxWidth="200.0" minHeight="350.0" maxHeight="350.0" prefHeight="350.0">
+                    <children>
+                        <ImageView fitHeight="275.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../resources/images/books/demo_book.jpg" />
+                            </image>
+                        </ImageView>
+                        <Text text="Suneeta Vaswani" fill="#444c63">
+                            <font>
+                                <Font size="16.0"  name="Proxima Nova Regular"/>
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="3.0" top="10.0"/>
+                            </VBox.margin>
+                        </Text>
+                        <Text text="by Geeta Devi" fill="#6f7d95">
+                            <font>
+                                <Font size="12.0"  name="Proxima Nova Regular"/>
+                            </font>
+                        </Text>
+                        <HBox spacing="4">
+                            <children>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR_HALF_ALT" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR_ALT" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="10.0" top="5.0"/>
+                            </VBox.margin>
+                        </HBox>
+
+                    </children>
+                </VBox>
+
+                <VBox AnchorPane.leftAnchor="220.0" AnchorPane.topAnchor="400.0" prefWidth="200.0" minWidth="200.0" maxWidth="200.0" minHeight="350.0" maxHeight="350.0" prefHeight="350.0">
+                    <children>
+                        <ImageView fitHeight="275.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../resources/images/books/demo_book.jpg" />
+                            </image>
+                        </ImageView>
+                        <Text text="Suneeta Vaswani" fill="#444c63">
+                            <font>
+                                <Font size="16.0"  name="Proxima Nova Regular"/>
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="3.0" top="10.0"/>
+                            </VBox.margin>
+                        </Text>
+                        <Text text="by Geeta Devi" fill="#6f7d95">
+                            <font>
+                                <Font size="12.0"  name="Proxima Nova Regular"/>
+                            </font>
+                        </Text>
+                        <HBox spacing="4">
+                            <children>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR_HALF_ALT" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR_ALT" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="10.0" top="5.0"/>
+                            </VBox.margin>
+                        </HBox>
+
+                    </children>
+                </VBox>
+
+                <VBox AnchorPane.leftAnchor="440.0" AnchorPane.topAnchor="400.0" prefWidth="200.0" minWidth="200.0" maxWidth="200.0" minHeight="350.0" maxHeight="350.0" prefHeight="350.0">
+                    <children>
+                        <ImageView fitHeight="275.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../resources/images/books/demo_book.jpg" />
+                            </image>
+                        </ImageView>
+                        <Text text="Suneeta Vaswani" fill="#444c63">
+                            <font>
+                                <Font size="16.0"  name="Proxima Nova Regular"/>
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="3.0" top="10.0"/>
+                            </VBox.margin>
+                        </Text>
+                        <Text text="by Geeta Devi" fill="#6f7d95">
+                            <font>
+                                <Font size="12.0"  name="Proxima Nova Regular"/>
+                            </font>
+                        </Text>
+                        <HBox spacing="4">
+                            <children>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR_HALF_ALT" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR_ALT" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="10.0" top="5.0"/>
+                            </VBox.margin>
+                        </HBox>
+
+                    </children>
+                </VBox>
+
+                <VBox AnchorPane.leftAnchor="660.0" AnchorPane.topAnchor="400.0" prefWidth="200.0" minWidth="200.0" maxWidth="200.0" minHeight="350.0" maxHeight="350.0" prefHeight="350.0">
+                    <children>
+                        <ImageView fitHeight="275.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../resources/images/books/demo_book.jpg" />
+                            </image>
+                        </ImageView>
+                        <Text text="Suneeta Vaswani" fill="#444c63">
+                            <font>
+                                <Font size="16.0"  name="Proxima Nova Regular"/>
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="3.0" top="10.0"/>
+                            </VBox.margin>
+                        </Text>
+                        <Text text="by Geeta Devi" fill="#6f7d95">
+                            <font>
+                                <Font size="12.0"  name="Proxima Nova Regular"/>
+                            </font>
+                        </Text>
+                        <HBox spacing="4">
+                            <children>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR_HALF_ALT" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR_ALT" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="10.0" top="5.0"/>
+                            </VBox.margin>
+                        </HBox>
+
+                    </children>
+                </VBox>
+
+                <VBox AnchorPane.leftAnchor="880.0" AnchorPane.topAnchor="400.0" prefWidth="200.0" minWidth="200.0" maxWidth="200.0" minHeight="350.0" maxHeight="350.0" prefHeight="350.0">
+                    <children>
+                        <ImageView fitHeight="275.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../resources/images/books/demo_book.jpg" />
+                            </image>
+                        </ImageView>
+                        <Text text="Suneeta Vaswani" fill="#444c63">
+                            <font>
+                                <Font size="16.0"  name="Proxima Nova Regular"/>
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="3.0" top="10.0"/>
+                            </VBox.margin>
+                        </Text>
+                        <Text text="by Geeta Devi" fill="#6f7d95">
+                            <font>
+                                <Font size="12.0"  name="Proxima Nova Regular"/>
+                            </font>
+                        </Text>
+                        <HBox spacing="4">
+                            <children>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR_HALF_ALT" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR_ALT" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="10.0" top="5.0"/>
+                            </VBox.margin>
+                        </HBox>
+
+                    </children>
+                </VBox>
+
+                <VBox AnchorPane.leftAnchor="1100.0" AnchorPane.topAnchor="400.0" prefWidth="200.0" minWidth="200.0" maxWidth="200.0" minHeight="350.0" maxHeight="350.0" prefHeight="350.0">
+                    <children>
+                        <ImageView fitHeight="275.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../resources/images/books/demo_book.jpg" />
+                            </image>
+                        </ImageView>
+                        <Text text="Suneeta Vaswani" fill="#444c63">
+                            <font>
+                                <Font size="16.0"  name="Proxima Nova Regular"/>
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="3.0" top="10.0"/>
+                            </VBox.margin>
+                        </Text>
+                        <Text text="by Geeta Devi" fill="#6f7d95">
+                            <font>
+                                <Font size="12.0"  name="Proxima Nova Regular"/>
+                            </font>
+                        </Text>
+                        <HBox spacing="4">
+                            <children>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR_HALF_ALT" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR_ALT" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="10.0" top="5.0"/>
+                            </VBox.margin>
+                        </HBox>
+
+                    </children>
+                </VBox>
+
+                <VBox AnchorPane.leftAnchor="1320.0" AnchorPane.topAnchor="400.0" prefWidth="200.0" minWidth="200.0" maxWidth="200.0" minHeight="350.0" maxHeight="350.0" prefHeight="350.0">
+                    <children>
+                        <ImageView fitHeight="275.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../resources/images/books/demo_book.jpg" />
+                            </image>
+                        </ImageView>
+                        <Text text="Suneeta Vaswani" fill="#444c63">
+                            <font>
+                                <Font size="16.0"  name="Proxima Nova Regular"/>
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="3.0" top="10.0"/>
+                            </VBox.margin>
+                        </Text>
+                        <Text text="by Geeta Devi" fill="#6f7d95">
+                            <font>
+                                <Font size="12.0"  name="Proxima Nova Regular"/>
+                            </font>
+                        </Text>
+                        <HBox spacing="4">
+                            <children>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR_HALF_ALT" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR_ALT" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="10.0" top="5.0"/>
+                            </VBox.margin>
+                        </HBox>
+
+                    </children>
+                </VBox>
+
+                <!-- row 3 -->
+
+                <VBox AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="780.0" prefWidth="200.0" minWidth="200.0" maxWidth="200.0" minHeight="350.0" maxHeight="350.0" prefHeight="350.0">
+                    <children>
+                        <ImageView fitHeight="275.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../resources/images/books/demo_book.jpg" />
+                            </image>
+                        </ImageView>
+                        <Text text="Suneeta Vaswani" fill="#444c63">
+                            <font>
+                                <Font size="16.0"  name="Proxima Nova Regular"/>
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="3.0" top="10.0"/>
+                            </VBox.margin>
+                        </Text>
+                        <Text text="by Geeta Devi" fill="#6f7d95">
+                            <font>
+                                <Font size="12.0"  name="Proxima Nova Regular"/>
+                            </font>
+                        </Text>
+                        <HBox spacing="4">
+                            <children>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR_HALF_ALT" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR_ALT" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="10.0" top="5.0"/>
+                            </VBox.margin>
+                        </HBox>
+
+                    </children>
+                </VBox>
+
+                <VBox AnchorPane.leftAnchor="220.0" AnchorPane.topAnchor="780.0" prefWidth="200.0" minWidth="200.0" maxWidth="200.0" minHeight="350.0" maxHeight="350.0" prefHeight="350.0">
+                    <children>
+                        <ImageView fitHeight="275.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../resources/images/books/demo_book.jpg" />
+                            </image>
+                        </ImageView>
+                        <Text text="Suneeta Vaswani" fill="#444c63">
+                            <font>
+                                <Font size="16.0"  name="Proxima Nova Regular"/>
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="3.0" top="10.0"/>
+                            </VBox.margin>
+                        </Text>
+                        <Text text="by Geeta Devi" fill="#6f7d95">
+                            <font>
+                                <Font size="12.0"  name="Proxima Nova Regular"/>
+                            </font>
+                        </Text>
+                        <HBox spacing="4">
+                            <children>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR_HALF_ALT" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR_ALT" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="10.0" top="5.0"/>
+                            </VBox.margin>
+                        </HBox>
+
+                    </children>
+                </VBox>
+
+                <VBox AnchorPane.leftAnchor="440.0" AnchorPane.topAnchor="780.0" prefWidth="200.0" minWidth="200.0" maxWidth="200.0" minHeight="350.0" maxHeight="350.0" prefHeight="350.0">
+                    <children>
+                        <ImageView fitHeight="275.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../resources/images/books/demo_book.jpg" />
+                            </image>
+                        </ImageView>
+                        <Text text="Suneeta Vaswani" fill="#444c63">
+                            <font>
+                                <Font size="16.0"  name="Proxima Nova Regular"/>
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="3.0" top="10.0"/>
+                            </VBox.margin>
+                        </Text>
+                        <Text text="by Geeta Devi" fill="#6f7d95">
+                            <font>
+                                <Font size="12.0"  name="Proxima Nova Regular"/>
+                            </font>
+                        </Text>
+                        <HBox spacing="4">
+                            <children>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR_HALF_ALT" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR_ALT" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="10.0" top="5.0"/>
+                            </VBox.margin>
+                        </HBox>
+
+                    </children>
+                </VBox>
+
+                <VBox AnchorPane.leftAnchor="660.0" AnchorPane.topAnchor="780.0" prefWidth="200.0" minWidth="200.0" maxWidth="200.0" minHeight="350.0" maxHeight="350.0" prefHeight="350.0">
+                    <children>
+                        <ImageView fitHeight="275.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../resources/images/books/demo_book.jpg" />
+                            </image>
+                        </ImageView>
+                        <Text text="Suneeta Vaswani" fill="#444c63">
+                            <font>
+                                <Font size="16.0"  name="Proxima Nova Regular"/>
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="3.0" top="10.0"/>
+                            </VBox.margin>
+                        </Text>
+                        <Text text="by Geeta Devi" fill="#6f7d95">
+                            <font>
+                                <Font size="12.0"  name="Proxima Nova Regular"/>
+                            </font>
+                        </Text>
+                        <HBox spacing="4">
+                            <children>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR_HALF_ALT" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR_ALT" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="10.0" top="5.0"/>
+                            </VBox.margin>
+                        </HBox>
+
+                    </children>
+                </VBox>
+
+                <VBox AnchorPane.leftAnchor="880.0" AnchorPane.topAnchor="780.0" prefWidth="200.0" minWidth="200.0" maxWidth="200.0" minHeight="350.0" maxHeight="350.0" prefHeight="350.0">
+                    <children>
+                        <ImageView fitHeight="275.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../resources/images/books/demo_book.jpg" />
+                            </image>
+                        </ImageView>
+                        <Text text="Suneeta Vaswani" fill="#444c63">
+                            <font>
+                                <Font size="16.0"  name="Proxima Nova Regular"/>
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="3.0" top="10.0"/>
+                            </VBox.margin>
+                        </Text>
+                        <Text text="by Geeta Devi" fill="#6f7d95">
+                            <font>
+                                <Font size="12.0"  name="Proxima Nova Regular"/>
+                            </font>
+                        </Text>
+                        <HBox spacing="4">
+                            <children>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR_HALF_ALT" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR_ALT" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="10.0" top="5.0"/>
+                            </VBox.margin>
+                        </HBox>
+
+                    </children>
+                </VBox>
+
+                <VBox AnchorPane.leftAnchor="1100.0" AnchorPane.topAnchor="780.0" prefWidth="200.0" minWidth="200.0" maxWidth="200.0" minHeight="350.0" maxHeight="350.0" prefHeight="350.0">
+                    <children>
+                        <ImageView fitHeight="275.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../resources/images/books/demo_book.jpg" />
+                            </image>
+                        </ImageView>
+                        <Text text="Suneeta Vaswani" fill="#444c63">
+                            <font>
+                                <Font size="16.0"  name="Proxima Nova Regular"/>
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="3.0" top="10.0"/>
+                            </VBox.margin>
+                        </Text>
+                        <Text text="by Geeta Devi" fill="#6f7d95">
+                            <font>
+                                <Font size="12.0"  name="Proxima Nova Regular"/>
+                            </font>
+                        </Text>
+                        <HBox spacing="4">
+                            <children>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR_HALF_ALT" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR_ALT" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="10.0" top="5.0"/>
+                            </VBox.margin>
+                        </HBox>
+
+                    </children>
+                </VBox>
+
+                <VBox AnchorPane.leftAnchor="1320.0" AnchorPane.topAnchor="780.0" prefWidth="200.0" minWidth="200.0" maxWidth="200.0" minHeight="350.0" maxHeight="350.0" prefHeight="350.0">
+                    <children>
+                        <ImageView fitHeight="275.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../resources/images/books/demo_book.jpg" />
+                            </image>
+                        </ImageView>
+                        <Text text="Suneeta Vaswani" fill="#444c63">
+                            <font>
+                                <Font size="16.0"  name="Proxima Nova Regular"/>
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="3.0" top="10.0"/>
+                            </VBox.margin>
+                        </Text>
+                        <Text text="by Geeta Devi" fill="#6f7d95">
+                            <font>
+                                <Font size="12.0"  name="Proxima Nova Regular"/>
+                            </font>
+                        </Text>
+                        <HBox spacing="4">
+                            <children>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR_HALF_ALT" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                                <Label>
+                                    <graphic>
+                                        <Glyph fontFamily="FontAwesome" icon="STAR_ALT" textFill="#ffab00" fontSize="14"/>
+                                    </graphic>
+                                </Label>
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="10.0" top="5.0"/>
+                            </VBox.margin>
+                        </HBox>
+
+                    </children>
+                </VBox>
+
+            </children>
+        </AnchorPane>
+
+        <ScrollPane fx:id="Sp" fitToWidth="true" hbarPolicy="AS_NEEDED" vbarPolicy="AS_NEEDED" AnchorPane.topAnchor="125.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.bottomAnchor="0.0"/>
+    </children>
+</AnchorPane>

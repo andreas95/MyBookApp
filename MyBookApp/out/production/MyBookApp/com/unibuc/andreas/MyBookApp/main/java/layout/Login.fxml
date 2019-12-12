@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import org.controlsfx.glyphfont.Glyph?>
+
+<AnchorPane fx:id="Main" prefWidth="330" maxWidth="330" minHeight="700" minWidth="300" stylesheets="@../../resources/css/login.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.unibuc.andreas.MyBookApp.main.java.fragments.Login">
+    <children>
+
+        <AnchorPane fx:id="HeaderPanel" prefWidth="330" minWidth="330" maxWidth="330" minHeight="45.0" prefHeight="45.0" maxHeight="45.0" styleClass="header">
+            <children>
+                <HBox fx:id="HeaderButtons" spacing="5" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" styleClass="button-hover">
+                    <children>
+                        <Label fx:id="ButtonClose" text="" onMouseClicked="#close" contentDisplay="CENTER">
+                            <graphic>
+                                <Glyph fontFamily="FontAwesome" icon="CIRCLE" textFill="#6756ea"/>
+                            </graphic>
+                        </Label>
+                        <Label fx:id="ButtonMinimize" text="" onMouseClicked="#minimize" contentDisplay="CENTER">
+                            <graphic>
+                                <Glyph fontFamily="FontAwesome" icon="CIRCLE" textFill="#ea569a"/>
+                            </graphic>
+                        </Label>
+                        <Label fx:id="ButtonFullScreen" text="" onMouseClicked="#full_screen" contentDisplay="CENTER">
+                            <graphic>
+                                <Glyph fontFamily="FontAwesome" icon="CIRCLE" textFill="#f1c85f"/>
+                            </graphic>
+                        </Label>
+                    </children>
+                </HBox>
+
+                <Label text="MyBookApp" textFill="#78829d" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="15.0" contentDisplay="LEFT">
+                    <font>
+                        <Font size="12.0"  name="Proxima Nova Regular"/>
+                    </font>
+                    <graphic>
+                        <Glyph fontFamily="FontAwesome" icon="BOOK" textFill="#78829d"/>
+                    </graphic>
+                </Label>
+            </children>
+        </AnchorPane>
+
+        <AnchorPane fx:id="PaneFragment" AnchorPane.topAnchor="45.0" prefWidth="330" minWidth="330" maxWidth="330"/>
+
+    </children>
+</AnchorPane>

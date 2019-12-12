@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+<AnchorPane fx:id="Main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../../resources/css/application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.unibuc.andreas.MyBookApp.main.java.fragments.AddABook">
+    <children>
+        <AnchorPane fx:id="HeaderContentPanel" AnchorPane.topAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.leftAnchor="0.0" prefWidth="-Infinity" styleClass="header-content-panel" minHeight="75.0" maxHeight="75.0" prefHeight="75.0">
+            <children>
+                <Text text="Add A Book" fill="#444c63" AnchorPane.topAnchor="20.0" AnchorPane.leftAnchor="20.0">
+                    <font>
+                        <Font size="22.0" name="Proxima Nova Regular"/>
+                    </font>
+                </Text>
+                <Line fx:id="HeaderSeparator" stroke="#dadfea" strokeWidth="3" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0" startX="0"/>
+            </children>
+        </AnchorPane>
+
+        <AnchorPane fx:id="BottomContentPanel" AnchorPane.topAnchor="150.0" AnchorPane.rightAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.bottomAnchor="30.0" prefWidth="-Infinity">
+            <padding>
+                <Insets left="40" top="0" bottom="20" right="20"/>
+            </padding>
+            <children>
+                <Text text="Browse Available Books" fill="#444c63" AnchorPane.topAnchor="15.0" AnchorPane.leftAnchor="20.0">
+                    <font>
+                        <Font size="22.0"  name="Proxima Nova Regular"/>
+                    </font>
+                </Text>
+            </children>
+        </AnchorPane>
+
+    </children>
+</AnchorPane>

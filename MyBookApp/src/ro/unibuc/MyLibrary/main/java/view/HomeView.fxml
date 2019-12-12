@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="Main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../../resources/css/application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.unibuc.MyLibrary.main.java.controller.HomeController">
+    <children>
+
+        <AnchorPane fx:id="HeaderContentPanel" AnchorPane.topAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.leftAnchor="0.0" prefWidth="-Infinity" styleClass="header-content-panel" minHeight="115.0" maxHeight="115.0" prefHeight="115.0">
+            <children>
+
+                <Text text="Welcome to the Online Library" fill="#444c63" AnchorPane.topAnchor="15.0" AnchorPane.leftAnchor="20.0">
+                    <font>
+                        <Font size="24.0" name="Proxima Nova Regular"/>
+                    </font>
+                </Text>
+                <Line fx:id="HeaderSeparator" stroke="#dadfea" strokeWidth="3" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0" startX="0"/>
+
+                <Text text="A service dedicated to students of the University of Bucharest learning community." fill="#444c63" AnchorPane.topAnchor="80.0" AnchorPane.leftAnchor="20.0">
+                    <font>
+                        <Font size="16.0"  name="Proxima Nova Regular"/>
+                    </font>
+                </Text>
+
+                <Line fx:id="HeaderSeparator2" stroke="#dadfea" strokeWidth="3" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="115.0" startX="0"/>
+
+            </children>
+        </AnchorPane>
+
+        <AnchorPane fx:id="BottomContentPanel" AnchorPane.topAnchor="119.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"  AnchorPane.bottomAnchor="0.0">
+            <children>
+                <ImageView fx:id="HomeImage"  pickOnBounds="true" preserveRatio="false" AnchorPane.leftAnchor="1.0" AnchorPane.bottomAnchor="1.0" AnchorPane.topAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <image>
+                        <Image url="@../../resources/images/application/homepicv2.jpg" />
+                    </image>
+                </ImageView>
+
+                <ImageView pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="5.0" AnchorPane.bottomAnchor="1.0" AnchorPane.topAnchor="5.0" AnchorPane.rightAnchor="0.0">
+                    <image>
+                        <Image url="@../../resources/images/application/logoub.png" />
+                    </image>
+                </ImageView>
+
+                <VBox spacing="10" alignment="CENTER" AnchorPane.topAnchor="10.0" AnchorPane.rightAnchor="50.0" styleClass="homepage-banner" minHeight="100.0">
+                 <children>
+                     <Text text="Quote of the Day" fill="#00008B">
+                         <font>
+                             <Font size="22.0"  name="TheSerif Basic"/>
+                         </font>
+                     </Text>
+
+                     <Text fx:id="TextQuote" wrappingWidth="700" fill="#00008B">
+                         <font>
+                             <Font size="18.0"  name="TheSerif Basic"/>
+                         </font>
+                     </Text>
+                 </children>
+                </VBox>
+
+                <VBox spacing="20" AnchorPane.topAnchor="300.0" AnchorPane.leftAnchor="370.0" styleClass="homepage-banner">
+                        <children>
+                            <Text text="Mission of the Online Library" fill="#00008B">
+                                <font>
+                                    <Font size="28.0"  name="TheSerif Basic"/>
+                                </font>
+                            </Text>
+
+                            <Text text="The Online Library's mission is to develop and maintain online resources and services in support of the present and future teaching, learning and research needs of the University of Bucharest Learning community." wrappingWidth="900" fill="#00008B">
+                                <font>
+                                    <Font size="20.0"  name="TheSerif Basic"/>
+                                </font>
+                            </Text>
+
+                            <Text text="We believe that:" fill="#00008B">
+                                <font>
+                                    <Font size="20.0"  name="TheSerif Basic"/>
+                                </font>
+                            </Text>
+
+                            <Text text="&#9;&#8226; Access to adequate library services and resources is essential for the attainment of superior academic skills in post-secondary education, regardless of where students, faculty, and programs are located." wrappingWidth="900" fill="#00008B">
+                                <font>
+                                    <Font size="20.0"  name="TheSerif Basic"/>
+                                </font>
+                            </Text>
+
+                            <Text text="&#9;&#8226; Members of the distance learning community are entitled to library services and resources equivalent to those provided for students and faculty in traditional campus settings." wrappingWidth="900" fill="#00008B">
+                                <font>
+                                    <Font size="20.0"  name="TheSerif Basic"/>
+                                </font>
+                            </Text>
+                        </children>
+                </VBox>
+
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
