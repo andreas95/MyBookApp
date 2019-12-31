@@ -17,7 +17,7 @@ public class SendEmail {
 
     public static void send(String to, String subject, String content) {
         final String username = "noreply.iplay@gmail.com";
-        final String password = "Privateinstr01";
+        final String password = "**************";
 
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");
